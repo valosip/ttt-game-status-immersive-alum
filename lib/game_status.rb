@@ -26,7 +26,10 @@ def won?(board)
 end
 
 def full?(board)
-  board.detect { |i| i == "X"}
-  
+    if board.count { |i| i == "X" || i == "O"} == 9 
+        return true
+    else
+        return false
+    end
 end
 
