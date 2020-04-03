@@ -27,17 +27,27 @@ end
 
 def full?(board)
     if board.count { |i| i == "X" || i == "O"} == 9 
-        return true
+        true
     else
-        return false
+        false
     end
 end
 
 def draw?(board)
   if !won?(board) && full?(board)
-    return true
+    true
   else
-    return false
+    false
   end
 end
+
+def over?(board)
+  if won?(board) || full?(board)
+    return true
+  else
+    false
+  end
+end
+
+
 
